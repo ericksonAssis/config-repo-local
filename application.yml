@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://git@github.com:ericksonAssis/config-repo-production.git
+          force-pull: true
+          repos:
+            development:
+              pattern:
+                - '*/development'
+              uri: git@github.com:ericksonAssis/config-repo-development.git
+            production:
+              pattern:
+                - '*/production'
+              uri: https://git@github.com:ericksonAssis/config-repo-production.git
+              force-pull: true
+            local:
+              pattern: '*/local'
+              uri: file:/home/erickson/dev/config-repo-local
