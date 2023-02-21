@@ -1,3 +1,6 @@
+limits-service:
+  minimum: 2
+  maximum: 98
 spring:
   cloud:
     config:
